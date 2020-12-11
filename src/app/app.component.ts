@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-todo';
+
+  appHead(event: string): void {
+    console.log(event);
+
+  }
 }
+
