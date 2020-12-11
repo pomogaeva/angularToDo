@@ -16,7 +16,7 @@ export class TodosComponent implements OnInit {
     setTimeout(() => {
       this.todoList = TODO_DATA;
     }, 2000);
-    //this.todoList = TODO_DATA;
+    // this.todoList = TODO_DATA;
   }
 
 }
