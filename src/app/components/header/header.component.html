@@ -1,0 +1,8 @@
+<header class="app-header">
+  <h1>{{title}}</h1>
+  <p [innerHTML]="subTitle"></p>
+
+  <ng-content></ng-content>
+</header>
+
+<button type="button" (click)="testEvent()">test event</button>
