@@ -1,4 +1,6 @@
 <section class="container app-todos">
+  <app-new-todo></app-new-todo>
+
   <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
     <app-todo-item *ngFor="let todo of todoList" [todo]="todo"></app-todo-item>
   </ul>

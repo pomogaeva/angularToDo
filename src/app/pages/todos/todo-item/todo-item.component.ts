@@ -9,9 +9,16 @@ import { Todo } from 'src/app/core/interfaces';
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
 
-  constructor() { }
+  isDescriptionShown = false;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  toggleDesc(): void {
+    this.isDescriptionShown = !this.isDescriptionShown;
   }
 
 }
