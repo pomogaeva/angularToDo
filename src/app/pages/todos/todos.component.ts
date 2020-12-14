@@ -20,6 +20,8 @@ export class TodosComponent implements OnInit {
 
 }
 
+// const TODO_DATA = [];
+
 const TODO_DATA = [
   {
     id: 1,
