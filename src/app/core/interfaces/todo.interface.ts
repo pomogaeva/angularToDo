@@ -4,5 +4,3 @@ export interface Todo {
   description: string;
   isDone: boolean;
 }
-
-// export { Todo as TodoItem };

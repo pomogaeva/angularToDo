@@ -16,21 +16,21 @@ export class TodosComponent implements OnInit {
     setTimeout(() => {
       this.todoList = TODO_DATA;
     }, 2000);
-    // this.todoList = TODO_DATA;
   }
 
 }
 
-const TODO_DATA = [{
-  id: 1,
-  title: 'Learn JS',
-  description: '',
-  isDone: true
-},
-{
-  id: 2,
-  title: 'Learn Angular',
-  description: 'Test description text',
-  isDone: false
-}
+const TODO_DATA = [
+  {
+    id: 1,
+    title: 'Learn JS',
+    description: '',
+    isDone: true
+  },
+  {
+    id: 2,
+    title: 'Learn Angular',
+    description: 'Test description text',
+    isDone: false
+  }
 ]

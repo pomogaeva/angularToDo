@@ -12,7 +12,7 @@ import { TodosComponent } from './pages/todos/todos.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TodosComponent
+    TodosComponent,
   ],
   imports: [
     BrowserModule,
