@@ -12,19 +12,11 @@ export class HeaderComponent implements OnInit {
   title = 'Angular 2Do';
   subTitle = 'Educational Angular project.';
 
-
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    console.log(this.testHeaderTitle);
   }
-
-  testEvent(): void {
-    this.headerText.emit(`hello! It's header.`);
-
-  }
-
 
 }
 

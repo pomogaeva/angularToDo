@@ -23,13 +23,13 @@ export class TodosComponent implements OnInit {
 
 const TODO_DATA = [{
   id: 1,
-  title: 'learn JS',
+  title: 'Learn JS',
   description: '',
   isDone: true
 },
 {
   id: 2,
-  title: 'learn Angular',
+  title: 'Learn Angular',
   description: 'Test description text',
   isDone: false
 }
