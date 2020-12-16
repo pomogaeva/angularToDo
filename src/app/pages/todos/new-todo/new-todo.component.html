@@ -1,17 +1,29 @@
-<form #newTodoForm="ngForm" class="app-new-todo" (ngSubmit)="onSubmit()">
+<form class="app-new-todo" (ngSubmit)="onSubmit()" [formGroup]="newTodoForm">
+
   <div class="form-group">
-    <input type="text" name="title" class="form-control" placeholder="Todo title" #newTodoTitle="ngModel"
-      [(ngModel)]="title" required [ngClass]="{        
-        'is-invalid': newTodoTitle.invalid && isSubmit,        
-      'is-valid': newTodoTitle.valid && isSubmit }">
+    <input type="text" name="title" minlength="3" class="form-control" placeholder="Todo title" formControlName="title"
+      [ngClass]="{
+      'is-valid': titleControl.valid && isSubmit,
+      'is-invalid': titleControl.invalid && isSubmit}">
+
+    <!-- <div class="invalid-feedback" *ngIf="newTodoTitle.errors && isSubmit">
+      <span *ngIf="newTodoTitle.errors.minlength">
+        Todo title should have at least 3 characters.
+      </span>
+
+      <span *ngIf="newTodoTitle.errors.required">
+        Todo title is a mandatory field.
+      </span>
+    </div> -->
   </div>
 
   <div class="form-group">
     <textarea name="description" rows="3" class="form-control" placeholder="Description"
-      [(ngModel)]="description"></textarea>
+      formControlName="description"></textarea>
   </div>
 
   <footer>
+    <!-- [disabled]="newTodoForm.invalid" -->
     <button class="btn btn-primary" type="submit">
       Create
     </button>
