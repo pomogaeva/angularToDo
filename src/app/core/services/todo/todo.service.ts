@@ -10,10 +10,6 @@ export class TodoService {
 
   constructor() { }
 
-  // getTodoData(): Array<Todo> {
-  //   return this.todoData;
-  // }
-
   getTodoData(): Observable<Array<Todo>> {
     return new Observable((observer) => {
       observer.next(this.todoData);
