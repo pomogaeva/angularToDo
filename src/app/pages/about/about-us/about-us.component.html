@@ -1,0 +1,23 @@
+<h2 class="text-center">About Us</h2>
+
+<p>
+  Voluptatem ipsam illo nemo officiis quam, blanditiis dolore, debitis magnam, placeat delectus
+  culpa voluptatum impedit assumenda aliquam laudantium quis expedita veniam numquam omnis a error. Consequuntur neque
+  ea, impedit eligendi aliquam officia nostrum! Hic, deleniti dignissimos? Dolor.
+</p>
+
+<div class="card-group">
+  <div class="card" *ngFor="let item of userList">
+    <img class="card-img-top" [src]="item.photo" alt="{{item.name}} photo">
+
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.description}}</p>
+      <a class="btn btn-primary" [routerLink]="item.id"> More info</a>
+    </div>
+
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>

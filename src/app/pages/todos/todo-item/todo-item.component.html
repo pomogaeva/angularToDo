@@ -1,7 +1,7 @@
 <li class="list-group-item todos-item">
   <header class="todo-header">
     <div class="d-flex">
-      <i class="material-icons check-box">
+      <i class="material-icons check-box" (click)="toggleTodo()">
         {{ todo.isDone ? 'check_box' : 'check_box_outline_blank' }}
       </i>
 
@@ -12,10 +12,10 @@
 
     <div class="todo-btn-group">
       <button class="btn btn-primary" [disabled]="!todo.description" (click)="toggleDesc()">
-        {{ isDescriptionShown ? 'Hide details' : 'Show details' }}
+        {{ isDescriptionShown ? 'Hide details' : 'Show details' | lowercase }}
       </button>
 
-      <button class="btn btn-danger">Delete</button>
+      <button class="btn btn-danger" (click)="delTodo(todo.id)">{{'Delete' | lowercase}}</button>
     </div>
   </header>
 

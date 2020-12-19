@@ -1,34 +1,47 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Todo } from '../../interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
-  todoData: Array<Todo> = TODO_DATA;
+  todoData = new BehaviorSubject<Array<Todo>>(null);
 
-  constructor() { }
+  private url = `${environment.url}todos`;
 
-  getTodoData(): Observable<Array<Todo>> {
-    return new Observable((observer) => {
-      observer.next(this.todoData);
-      observer.complete();
+  constructor(private http: HttpClient) {
+    this.getTodoData();
+  }
+
+  private getTodoData(): void {
+    this.http.get<Array<Todo>>(this.url)
+      .subscribe(data => {
+        this.todoData.next(data)
+      });
+  }
+
+  delTodo(todoId: number): void {
+    this.http.delete(`${this.url}/${todoId}`)
+      .subscribe(() => {
+        this.getTodoData();
+      });
+  }
+
+  addTodo(newTodo: Todo): void {
+
+    this.http.post(this.url, newTodo)
+      .subscribe(() => {
+        this.getTodoData()
+      })
+  }
+
+  updateTodo(todoId: number, newTodo: Todo): void {
+    this.http.put(`${this.url}/${todoId}`, newTodo).subscribe(() => {
+      this.getTodoData();
     });
   }
 }
 
-const TODO_DATA = [
-  {
-    id: 1,
-    title: 'Learn JS',
-    description: '',
-    isDone: true
-  },
-  {
-    id: 2,
-    title: 'Learn Angular',
-    description: 'Test description text',
-    isDone: false
-  }
-]

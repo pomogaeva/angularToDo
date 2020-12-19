@@ -10,14 +10,19 @@ import { TodoService } from 'src/app/core/services/todo/todo.service';
 
 export class TodosComponent implements OnInit {
   todoList: Array<Todo>;
+  search: string;
 
   constructor(private todoService: TodoService) { }
 
+
   ngOnInit(): void {
-    this.todoService.getTodoData()
-      .subscribe((data: Array<Todo>) => {
-        this.todoList = data;
-      });
+    this.getTodoData();
+  }
+
+  private getTodoData(): void {
+    this.todoService.todoData.subscribe(data => {
+      this.todoList = data;
+    });
   }
 
 }

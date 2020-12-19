@@ -1,8 +1,15 @@
 <section class="container app-todos">
   <app-new-todo></app-new-todo>
 
+  <form>
+    <div class="form-group">
+      <input class="form-control" name="search" type="text" placeholder="Search..." [(ngModel)]="search" />
+    </div>
+  </form>
+
   <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
-    <app-todo-item *ngFor="let todo of todoList" [todo]="todo"></app-todo-item>
+    <app-todo-item *ngFor="let todo of todoList | filterTodo: search" [todo]="todo" (deleted)="deletedTodo()">
+    </app-todo-item>
   </ul>
 
   <div class="text-center" *ngIf="!todoList">
