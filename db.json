@@ -11,12 +11,6 @@
       "title": "Learn Angular",
       "description": "Test description text",
       "isDone": false
-    },
-    {
-      "title": "test",
-      "description": null,
-      "isDone": false,
-      "id": 12
     }
   ],
   "users": [
