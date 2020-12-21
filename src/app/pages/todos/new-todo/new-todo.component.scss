@@ -6,4 +6,15 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  .todo-badges {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .todo-badge {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+  }
 }
