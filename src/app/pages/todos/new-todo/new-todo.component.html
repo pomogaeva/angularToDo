@@ -26,26 +26,18 @@
     <p>Priority:</p>
 
     <div class="todo-badges">
-      <div class="todo-badge form-check">
-        <input class="form-check-input" type="radio" name="priority-label" id="low" value="low" checked>
-        <label class="form-check-label" for="low">
-          <span class="todo-badge-content badge badge-pill badge-success">Low</span>
-        </label>
-      </div>
-
-      <div class="todo-badge form-check">
-        <input class="form-check-input" type="radio" name="priority-label" id="medium" value="medium" checked>
-        <label class="form-check-label" for="medium">
-          <span class="todo-badge-content badge badge-pill badge-warning">Medium</span>
-        </label>
-      </div>
-
-      <div class="todo-badge form-check">
-        <input class="form-check-input" type="radio" name="priority-label" id="high" value="high" checked>
-        <label class="form-check-label" for="high">
-          <span class="todo-badge-content badge badge-pill badge-danger">High</span>
-        </label>
-      </div>
+      <label class="todo-badge">
+        <input type="radio" value="low" formControlName="priority">
+        <span class="todo-badge-content badge badge-pill badge-success">low</span>
+      </label>
+      <label class="todo-badge">
+        <input type="radio" value="medium" formControlName="priority">
+        <span class="todo-badge-content badge badge-pill badge-warning">medium</span>
+      </label>
+      <label class="todo-badge">
+        <input type="radio" value="high" formControlName="priority">
+        <span class="todo-badge-content badge badge-pill badge-danger">high</span>
+      </label>
     </div>
   </div>
 

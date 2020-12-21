@@ -3,7 +3,24 @@
 
   <form>
     <div class="form-group">
-      <input class="form-control" name="search" type="text" placeholder="Search..." [(ngModel)]="search" />
+      <input class="form-control" name="search" type="text" placeholder="Search..." [(ngModel)]="search">
+      <!-- <input class="form-control" name="priority " type="radio" [(ngModel)]="priority"> -->
+      <label class="todo-badge">
+        <input type="radio" value="low" [(ngModel)]="priority">
+        <span class="todo-badge-content badge badge-pill badge-success">low</span>
+      </label>
+      <label class="todo-badge">
+        <input type="radio" value="medium" [(ngModel)]="priority">
+        <span class="todo-badge-content badge badge-pill badge-warning">medium</span>
+      </label>
+      <label class="todo-badge">
+        <input type="radio" value="high" [(ngModel)]="priority">
+        <span class="todo-badge-content badge badge-pill badge-danger">high</span>
+      </label>
+      <label class="todo-badge">
+        <input type="radio" [(ngModel)]="priority">
+        <span class="todo-badge-content badge badge-pill badge-dark">all</span>
+      </label>
     </div>
   </form>
 
