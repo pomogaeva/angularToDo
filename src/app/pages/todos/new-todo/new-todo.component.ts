@@ -35,9 +35,9 @@ export class NewTodoComponent implements OnInit {
     }
 
     this.isSubmit = false;
+    this.setDefaultValue();
     this.todoService.addTodo(this.newTodoForm.value);
     this.newTodoForm.reset();
-    this.setDefaultValue();
   }
 
   private createNewTodoForm(): void {
@@ -51,8 +51,7 @@ export class NewTodoComponent implements OnInit {
 
       description: [],
       isDone: [false],
-      priority: [
-        'low']
+      priority: ['low']
     });
 
   }

@@ -8,7 +8,10 @@
       <h5 [class.is-done]="todo.isDone">
         {{todo.title}}
       </h5>
-      <span class="badge badge-pill">{{todo.priority}}</span>
+
+      <div class="todo-priority">
+        <span class="todo-badge-content badge badge-pill" [ngClass]="{}">{{todo.priority}}</span>
+      </div>
     </div>
 
     <div class="todo-btn-group">
