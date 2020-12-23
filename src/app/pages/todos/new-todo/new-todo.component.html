@@ -1,12 +1,13 @@
 <div class="modal-header">
-  <h4 class="modal-title pull-left">New Todo</h4>
+  <h4 class="modal-title pull-left">{{modalHeader}}</h4>
   <button type="button" class="close pull-right" aria-label="Close" (click)="modalHide()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-<div class="modal-body">
-  <form class="app-new-todo" (ngSubmit)="onSubmit()" [formGroup]="newTodoForm">
 
+<form class="app-new-todo" (ngSubmit)="onSubmit()" [formGroup]="newTodoForm">
+
+  <div class="modal-body">
     <div class="form-group">
       <input type="text" name="title" minlength="3" class="form-control" placeholder="Todo title"
         formControlName="title" [ngClass]="{
@@ -47,12 +48,13 @@
         </label>
       </div>
     </div>
-
-    <footer>
-      <button class="btn btn-primary" type="submit">
-        Create
-      </button>
-    </footer>
-
-  </form>
-</div>
+  </div>
+  <footer class="modal-footer">
+    <button class="btn btn-secondary" type="button" (click)="modalHide()">
+      Cancel
+    </button>
+    <button class="btn btn-primary" type="submit">
+      Save
+    </button>
+  </footer>
+</form>

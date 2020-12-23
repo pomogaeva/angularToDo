@@ -17,11 +17,15 @@
     </div>
 
     <div class="todo-btn-group">
-      <button class="btn btn-primary" [disabled]="!todo.description" (click)="toggleDesc()">
-        {{ isDescriptionShown ? 'Hide details' : 'Show details' | lowercase }}
+      <button type="button" class="btn btn-secondary" [disabled]="!todo.description" (click)="toggleDesc()">
+        {{ isDescriptionShown ? 'hide details' : 'show details' | lowercase }}
       </button>
 
-      <button class="btn btn-danger" (click)="delTodo(todo.id)">{{'Delete' | lowercase}}</button>
+      <button type="button" class="btn btn-primary" (click)="editTodo()">
+        {{'edit' | lowercase}}
+      </button>
+
+      <button type="button" class="btn btn-danger" (click)="delTodo(todo.id)">{{'delete' | lowercase}}</button>
     </div>
   </header>
 

@@ -1,7 +1,7 @@
 <section class="container app-todos">
   <!-- <app-new-todo></app-new-todo> -->
 
-  <button type="button" class="btn btn-primary" (click)="openModal()">Create New Todo</button>
+  <button type="button" class="btn btn-primary" (click)="createNewTodo()">Create New Todo</button>
 
 
   <form>
@@ -31,7 +31,7 @@
 
   <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
     <app-todo-item *ngFor="let todo of todoList | filterTodo: search | filterTodo: priority" [todo]="todo"
-      (deleted)="deletedTodo()">
+      (deleted)="deletedTodo()" (isEdit)="editTodo($event)">
     </app-todo-item>
   </ul>
 

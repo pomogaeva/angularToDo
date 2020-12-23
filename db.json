@@ -41,6 +41,13 @@
       "isDone": false,
       "priority": "medium",
       "id": 7
+    },
+    {
+      "title": "Learn CSS",
+      "description": "utvg",
+      "isDone": false,
+      "priority": "high",
+      "id": 8
     }
   ],
   "users": [
