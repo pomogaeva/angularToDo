@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Todo } from 'src/app/core/interfaces';
@@ -46,16 +46,16 @@ export class NewTodoComponent implements OnInit {
   private createNewTodoForm(): void {
     this.newTodoForm = this.fb.group({
       title: [
-        this.todo.title || null,
+        this.todo?.title || null,
         [
           Validators.required,
           Validators.minLength]
       ],
 
-      description: [this.todo.description || null],
-      isDone: [this.todo.isDone || false],
-      priority: [this.todo.priority || 'low'],
-      id: [this.todo.id || null]
+      description: [this.todo?.description || null],
+      isDone: [this.todo?.isDone || false],
+      priority: [this.todo?.priority || 'low'],
+      id: [this.todo?.id || null]
     });
 
   }
