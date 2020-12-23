@@ -1,3 +1,29 @@
 .app-todos {
   margin-bottom: 70px;
 }
+
+.todo-badges {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.todo-badge {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+
+  .badge {
+    margin-left: 7px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .todo-badges  {
+    justify-content: center;
+  }
+
+  .todo-badge {
+    margin-right: 10px;
+  }
+}

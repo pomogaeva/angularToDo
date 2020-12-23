@@ -21,10 +21,22 @@
   padding: 10px 0px;
 }
 
+.todo-priority {
+  margin-left: 7px;
+}
+
 @media screen and (max-width: 500px) {
   .todo-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .todo-title {
+    font-size: 18px;
+  }
+
+  .todo-btn-group {
+    margin-top: 10px;
   }
 }
 

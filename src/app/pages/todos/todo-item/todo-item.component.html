@@ -5,12 +5,14 @@
         {{ todo.isDone ? 'check_box' : 'check_box_outline_blank' }}
       </i>
 
-      <h5 [class.is-done]="todo.isDone">
+      <h5 class="todo-title" [class.is-done]="todo.isDone">
         {{todo.title}}
       </h5>
 
       <div class="todo-priority">
-        <span class="todo-badge-content badge badge-pill" [ngClass]="{}">{{todo.priority}}</span>
+        <span class="todo-badge-content badge badge-pill" [class.badge-success]="todo.priority == 'low'"
+          [class.badge-warning]="todo.priority == 'medium'"
+          [class.badge-danger]="todo.priority == 'high'">{{todo.priority}}</span>
       </div>
     </div>
 

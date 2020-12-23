@@ -23,10 +23,6 @@ export class NewTodoComponent implements OnInit {
     return this.newTodoForm.get('title') as FormControl;
   }
 
-  get priorityControl(): any {
-    return this.newTodoForm.get('priority') as FormControl;
-  }
-
   onSubmit(): void {
     this.isSubmit = true;
 
@@ -35,9 +31,9 @@ export class NewTodoComponent implements OnInit {
     }
 
     this.isSubmit = false;
-    this.setDefaultValue();
     this.todoService.addTodo(this.newTodoForm.value);
     this.newTodoForm.reset();
+    this.setDefaultValue();
   }
 
   private createNewTodoForm(): void {

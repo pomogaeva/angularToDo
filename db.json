@@ -1,36 +1,39 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "Learn JS",
-      "description": "",
-      "isDone": true
+      "title": "Learn CSS",
+      "description": null,
+      "isDone": true,
+      "priority": "medium",
+      "id": 1
     },
     {
-      "id": 2,
+      "title": "Learn HTML",
+      "description": null,
+      "isDone": false,
+      "priority": "high",
+      "id": 2
+    },
+    {
       "title": "Learn Angular",
-      "description": "Test description text",
-      "isDone": false
-    },
-    {
-      "title": "vslg",
-      "description": "vwigr",
+      "description": "CLI",
       "isDone": false,
-      "id": 3
-    },
-    {
-      "title": "viy",
-      "description": "bou",
-      "isDone": false,
-      "priority": "low",
+      "priority": "medium",
       "id": 4
     },
     {
-      "title": "tcg",
-      "description": "bo",
-      "isDone": null,
-      "priority": "low",
+      "title": "Learn Bootstrap",
+      "description": null,
+      "isDone": false,
+      "priority": "medium",
       "id": 5
+    },
+    {
+      "title": "learn Angular CLI",
+      "description": null,
+      "isDone": false,
+      "priority": "high",
+      "id": 6
     }
   ],
   "users": [
