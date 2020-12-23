@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class NewTodoComponent implements OnInit {
   newTodoForm: FormGroup;
   isSubmit = false;
 
-  constructor(private fb: FormBuilder, private todoService: TodoService) {
+  constructor(private fb: FormBuilder, private todoService: TodoService,
+    private bsModalRef: BsModalRef) {
 
   }
 
@@ -32,8 +34,11 @@ export class NewTodoComponent implements OnInit {
 
     this.isSubmit = false;
     this.todoService.addTodo(this.newTodoForm.value);
-    this.newTodoForm.reset();
-    this.setDefaultValue();
+    this.modalHide();
+  }
+
+  modalHide(): void {
+    this.bsModalRef.hide();
   }
 
   private createNewTodoForm(): void {
@@ -50,11 +55,6 @@ export class NewTodoComponent implements OnInit {
       priority: ['low']
     });
 
-  }
-
-  private setDefaultValue(): void {
-    this.newTodoForm.value.isDone = false;
-    this.newTodoForm.controls['priority'].setValue('low');
   }
 
 }

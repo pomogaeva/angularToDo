@@ -1,50 +1,58 @@
-<form class="app-new-todo" (ngSubmit)="onSubmit()" [formGroup]="newTodoForm">
+<div class="modal-header">
+  <h4 class="modal-title pull-left">New Todo</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="modalHide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form class="app-new-todo" (ngSubmit)="onSubmit()" [formGroup]="newTodoForm">
 
-  <div class="form-group">
-    <input type="text" name="title" minlength="3" class="form-control" placeholder="Todo title" formControlName="title"
-      [ngClass]="{
-      'is-valid': titleControl.valid && isSubmit,
-      'is-invalid': titleControl.invalid && isSubmit}">
+    <div class="form-group">
+      <input type="text" name="title" minlength="3" class="form-control" placeholder="Todo title"
+        formControlName="title" [ngClass]="{
+        'is-valid': titleControl.valid && isSubmit,
+        'is-invalid': titleControl.invalid && isSubmit}">
 
-    <div class="invalid-feedback" *ngIf="titleControl.errors && isSubmit">
-      <span *ngIf="titleControl.errors.minlength">
-        Todo title should have at least 3 characters.
-      </span>
+      <div class="invalid-feedback" *ngIf="titleControl.errors && isSubmit">
+        <span *ngIf="titleControl.errors.minlength">
+          Todo title should have at least 3 characters.
+        </span>
 
-      <span *ngIf="titleControl.errors.required">
-        Todo title is a mandatory field.
-      </span>
+        <span *ngIf="titleControl.errors.required">
+          Todo title is a mandatory field.
+        </span>
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <textarea name="description" rows="3" class="form-control" placeholder="Description"
-      formControlName="description"></textarea>
-  </div>
-
-  <div class="todo-priority">
-    <p>Priority:</p>
-
-    <div class="todo-badges">
-      <label class="todo-badge">
-        <input type="radio" value="low" formControlName="priority">
-        <span class="todo-badge-content badge badge-pill badge-success">low</span>
-      </label>
-      <label class="todo-badge">
-        <input type="radio" value="medium" formControlName="priority">
-        <span class="todo-badge-content badge badge-pill badge-warning">medium</span>
-      </label>
-      <label class="todo-badge">
-        <input type="radio" value="high" formControlName="priority">
-        <span class="todo-badge-content badge badge-pill badge-danger">high</span>
-      </label>
+    <div class="form-group">
+      <textarea name="description" rows="3" class="form-control" placeholder="Description"
+        formControlName="description"></textarea>
     </div>
-  </div>
 
-  <footer>
-    <button class="btn btn-primary" type="submit">
-      Create
-    </button>
-  </footer>
+    <div class="todo-priority">
+      <p>Priority:</p>
 
-</form>
+      <div class="todo-badges">
+        <label class="todo-badge">
+          <input type="radio" value="low" formControlName="priority">
+          <span class="todo-badge-content badge badge-pill badge-success">low</span>
+        </label>
+        <label class="todo-badge">
+          <input type="radio" value="medium" formControlName="priority">
+          <span class="todo-badge-content badge badge-pill badge-warning">medium</span>
+        </label>
+        <label class="todo-badge">
+          <input type="radio" value="high" formControlName="priority">
+          <span class="todo-badge-content badge badge-pill badge-danger">high</span>
+        </label>
+      </div>
+    </div>
+
+    <footer>
+      <button class="btn btn-primary" type="submit">
+        Create
+      </button>
+    </footer>
+
+  </form>
+</div>

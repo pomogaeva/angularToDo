@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutProjectComponent } from './pages/about/about-project/about-project.component';
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
 import { UserComponent } from './pages/about/user/user.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,10 @@ import { UserComponent } from './pages/about/user/user.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
+  entryComponents: [NewTodoComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
