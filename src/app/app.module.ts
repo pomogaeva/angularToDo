@@ -18,6 +18,7 @@ import { AboutProjectComponent } from './pages/about/about-project/about-project
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
 import { UserComponent } from './pages/about/user/user.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { FilterTodoPriorityPipe } from './shared/pipes/filter-todo-priority/filter-todo-priority.pipe';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AboutProjectComponent,
     AboutUsComponent,
     UserComponent,
+    FilterTodoPriorityPipe,
   ],
   imports: [
     BrowserModule,

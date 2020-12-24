@@ -11,27 +11,30 @@
     </div>
 
     <div class="todo-badges">
-      <label class="todo-badge">
-        <input name="priority" type="radio" [(ngModel)]="priority">
-        <span class="todo-badge-content badge badge-pill badge-success">low</span>
-      </label>
-      <label class="todo-badge">
-        <input name="priority" type="radio" [(ngModel)]="priority">
-        <span class="todo-badge-content badge badge-pill badge-warning">medium</span>
-      </label>
-      <label class="todo-badge">
-        <input name="priority" type="radio" [(ngModel)]="priority">
-        <span class="todo-badge-content badge badge-pill badge-danger">high</span>
-      </label>
-      <label class="todo-badge">
-        <input name="priority" type="radio" [(ngModel)]="priority">
-        <span class="todo-badge-content badge badge-pill badge-dark">all</span>
-      </label>
+      <div class="todo-badge">
+        <input type="radio" id="low" name="priority" value="low" [(ngModel)]="priority">
+        <label class="todo-badge-content badge badge-pill badge-success" for="low">low</label>
+      </div>
+
+      <div class="todo-badge">
+        <input type="radio" id="medium" name="priority" value="medium" [(ngModel)]="priority">
+        <label class="todo-badge-content badge badge-pill badge-warning" for="medium">medium</label>
+      </div>
+
+      <div class="todo-badge">
+        <input type="radio" id="high" name="priority" value="high" [(ngModel)]="priority">
+        <label class="todo-badge-content badge badge-pill badge-danger" for="high">high</label>
+      </div>
+
+      <div class="todo-badge">
+        <input type="radio" id="all" name="priority" [(ngModel)]="priority">
+        <label class="todo-badge-content badge badge-pill badge-dark" for="all">all</label>
+      </div>
     </div>
   </form>
 
   <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
-    <app-todo-item *ngFor="let todo of todoList | filterTodo: search" [todo]="todo" (deleted)="deletedTodo()"
+    <app-todo-item *ngFor="let todo of todoList | filterTodo: search | filterTodoPriority: priority" [todo]=" todo"
       (isEdit)="editTodo($event)">
     </app-todo-item>
   </ul>
