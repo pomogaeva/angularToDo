@@ -1,13 +1,6 @@
 {
   "todos": [
     {
-      "title": "Learn HTML",
-      "description": null,
-      "isDone": true,
-      "priority": "high",
-      "id": 2
-    },
-    {
       "title": "Learn Angular",
       "description": "CLI",
       "isDone": false,
