@@ -16,7 +16,7 @@
     },
     {
       "title": "Learn SCSS",
-      "description": null,
+      "description": "Test description",
       "isDone": true,
       "priority": "medium",
       "id": 9
@@ -64,11 +64,18 @@
       "id": 15
     },
     {
-      "title": "Learn TypScript",
+      "title": "Learn TypeScript",
       "description": null,
       "isDone": false,
-      "priority": "medium",
+      "priority": "high",
       "id": 16
+    },
+    {
+      "title": "Test task",
+      "description": null,
+      "isDone": false,
+      "priority": "low",
+      "id": 17
     }
   ],
   "users": [
