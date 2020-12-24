@@ -1,0 +1,22 @@
+.user-name {
+  margin-top: 15px;
+}
+
+.user-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.user-message {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.user-json {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+}

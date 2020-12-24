@@ -1,0 +1,12 @@
+.about {
+  font-family: inherit;
+
+  &-section:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+
+  &-paragraph {
+    margin-left: 15px;
+    color: #5f5050;
+  }
+}

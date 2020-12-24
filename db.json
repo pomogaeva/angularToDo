@@ -25,17 +25,43 @@
   "users": [
     {
       "id": 1,
-      "name": "Jean Nguyen",
-      "email": "jean.nguyen@gmail.com",
-      "description": "mprove ashamed married expense bed her comfort pursuit mrs. Four time took ye your as fail lady. Up greatest am exertion or marianne. Shy occasional terminated insensible and inhabiting gay.",
-      "photo": "https://randomuser.me/api/portraits/women/94.jpg"
+      "name": "Volodymyr Trugubiak",
+      "email": "volodymyr.trugubiak@gmail.com",
+      "description": "Junior Front-end developer. Worked hard on this project",
+      "photo": "https://avatars0.githubusercontent.com/u/70875412?s=460&u=af2ad2429e88ce5a7b4bf55a4b565bdc2ccc82ac&v=4",
+      "message": "Hello! It was a pleasure working and learning with you! Hope you'll enjoy your winter holidays. P.S. Just so you won't forget how JSON data looks like ;) "
     },
     {
       "id": 2,
-      "name": "Chris Thompson",
-      "email": "chris.thompson@gmail.com",
-      "description": "You disposal strongly quitting his endeavor two settling him. Manners ham him hearted hundred expense. Get open game him what hour more part. Adapted as smiling of females oh me journey exposed concern.",
-      "photo": "https://randomuser.me/api/portraits/men/89.jpg"
+      "name": "Iryna Naiko",
+      "email": "iryna.naiko@gmail.com",
+      "description": "Junior Front-end developer. Had good dreams about this project for 3 weeks",
+      "photo": "https://avatars0.githubusercontent.com/u/65309525?s=460&u=2e966ed5e1d5741ab2cf38b0f3a9e3db33e002ff&v=4",
+      "message": "Hey there! Still deciding on whether or not to try Todos? Don't waste your time, it's an amazing app! Stay safe and plan 2021 tasks with us. P.S. Just so you won't forget how JSON data looks like ;)"
+    },
+    {
+      "id": 3,
+      "name": "Serhii Koziuk",
+      "email": "serhii.koziuk@gmail.com",
+      "description": "Coach/teacher at Beetroot, Middle Front-end developer. Do your Todo with Angular.",
+      "photo": "https://scontent.fiev25-2.fna.fbcdn.net/v/t31.0-8/24784949_1561912467228381_3132692425850997977_o.jpg?_nc_cat=104&ccb=2&_nc_sid=174925&_nc_ohc=Qzzea7uZvtwAX8Vn5tl&_nc_ht=scontent.fiev25-2.fna&oh=e3702eee01932896a9d9788fa1a0fd16&oe=600B41E7",
+      "message": "I'll be off till the January holidays end, so please no Slack messages :D Just a few pieces of advice from me: don't forget to Google whenever you feel you're stuck, always read documentation and set your next goal. Keep polishing what you know and explore new horizons of Front-end and don't forget how JSON data looks like ;)"
+    },
+    {
+      "id": 4,
+      "name": "Valeriy Titovych",
+      "email": "valeriy.titovych@gmail.com",
+      "description": "Junior Front-end developer. Didn't sleep at night so you can see this project in 2020",
+      "photo": "https://ca.slack-edge.com/T01A4UL9N9J-U019J1LCEF9-6e33c78c31df-512",
+      "message": "Hello! It was a pleasure working and learning with you! Hope you'll enjoy your winter holidays. P.S. Just so you won't forget how JSON data looks like ;) "
+    },
+    {
+      "id": 5,
+      "name": "Denys Bilonozhko",
+      "email": "denys.bilonozhko@gmail.com",
+      "description": "Junior Front-end developer. Silently did everything to make this project rock",
+      "photo": "https://ca.slack-edge.com/T01A4UL9N9J-U019Z02LER1-5b8c93de4bdc-512",
+      "message": "Hey there! Still deciding on whether or not to try Todos? Don't waste your time, it's an amazing app! Stay safe and plan 2021 tasks with us. P.S. Just so you won't forget how JSON data looks like ;)"
     }
   ]
 }
