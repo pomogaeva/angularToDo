@@ -46,7 +46,7 @@
       "title": "Learn Angular CLI",
       "description": null,
       "isDone": false,
-      "priority": "high",
+      "priority": "medium",
       "id": 13
     },
     {
@@ -62,6 +62,13 @@
       "isDone": false,
       "priority": "low",
       "id": 15
+    },
+    {
+      "title": "Learn TypScript",
+      "description": null,
+      "isDone": false,
+      "priority": "medium",
+      "id": 16
     }
   ],
   "users": [
