@@ -1,16 +1,9 @@
 {
   "todos": [
     {
-      "title": "Learn CSS",
-      "description": null,
-      "isDone": true,
-      "priority": "medium",
-      "id": 1
-    },
-    {
       "title": "Learn HTML",
       "description": null,
-      "isDone": false,
+      "isDone": true,
       "priority": "high",
       "id": 2
     },
@@ -29,32 +22,11 @@
       "id": 5
     },
     {
-      "title": "learn Angular CLI",
-      "description": null,
-      "isDone": false,
-      "priority": "high",
-      "id": 6
-    },
-    {
       "title": "Test",
       "description": null,
-      "isDone": false,
+      "isDone": true,
       "priority": "medium",
-      "id": 7
-    },
-    {
-      "title": "Learn CSS",
-      "description": "utvg",
-      "isDone": false,
-      "priority": "high",
-      "id": 8
-    },
-    {
-      "title": "#LinkTitle",
-      "description": null,
-      "isDone": false,
-      "priority": "medium",
-      "id": 9
+      "id": 6
     }
   ],
   "users": [

@@ -6,8 +6,8 @@ import { Todo } from 'src/app/core/interfaces';
 })
 export class FilterTodoPipe implements PipeTransform {
 
-  transform(value: Array<Todo>, search: string, priority: string): Array<Todo> {
-    if (!search && !priority) {
+  transform(value: Array<Todo>, search: string): Array<Todo> {
+    if (!search) {
       return value;
     }
 

@@ -30,8 +30,8 @@
   </form>
 
   <ul class="list-group list-group-flush todos-list" *ngIf="todoList">
-    <app-todo-item *ngFor="let todo of todoList | filterTodo: search | filterTodo: priority" [todo]="todo"
-      (deleted)="deletedTodo()" (isEdit)="editTodo($event)">
+    <app-todo-item *ngFor="let todo of todoList | filterTodo: search" [todo]="todo" (deleted)="deletedTodo()"
+      (isEdit)="editTodo($event)">
     </app-todo-item>
   </ul>
 
